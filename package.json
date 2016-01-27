@@ -1,5 +1,5 @@
 {
-  "name": "radius-google-auth",
+  "name": "gradius-server",
   "version": "1.0.0",
   "description": "Authenticate radius users against a google domain",
   "main": "./src/gradius-server.js",
@@ -34,10 +34,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mindera/gradius-Server.git"
+    "url": "git+https://github.com/Mindera/gradius-server.git"
   },
   "bugs": {
-    "url": "https://github.com/Mindera/gradius-Server/issues"
+    "url": "https://github.com/Mindera/gradius-server/issues"
   },
-  "homepage": "https://github.com/Mindera/gradius-Server#readme"
+  "homepage": "https://github.com/Mindera/gradius-server#readme"
 }
