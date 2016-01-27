@@ -24,7 +24,7 @@
     "babel-preset-es2015": "^6.3.13"
   },
   "bin": {
-    "gradius-server": "./bin/gradius-server.js"
+    "gradius-server": "./bin/gradius-server"
   },
   "keywords": [
     "google",
