@@ -64,7 +64,7 @@ function validateReceivedPacket(packet) {
     logger.info(`validated? ${success}`);
 
     if (success) {
-      radiusServer.sendAccessAcept(packet);
+      radiusServer.sendAccessAccept(packet);
     } else {
       radiusServer.sendAccessReject(packet);
     }
