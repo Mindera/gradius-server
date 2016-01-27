@@ -38,16 +38,19 @@ var logger = new _winston2.default.Logger({
 global.logger = logger;
 
 var pid = _process2.default.pid;
-var npid = undefined;
-try {
-  npid = _npid2.default.create(argv.pidfile);
-  npid.removeOnExit();
-} catch (error) {
-  console.error(error);
-  _process2.default.exit(1);
-}
 
-logger.info('======================= Starting Google Radius Server with PID: ' + pid + ' =======================');
+var npid = undefined;
+(function () {
+  try {
+    npid = _npid2.default.create(argv.pidfile);
+    npid.removeOnExit();
+  } catch (error) {
+    console.error(error);
+    _process2.default.exit(1);
+  }
+})();
+
+logger.info('========================= Starting Google Radius Server with PID: ' + pid + ' =========================');
 
 _process2.default.on('SIGTERM', terminate);
 _process2.default.on('SIGINT', terminate);
@@ -56,7 +59,7 @@ _process2.default.on('SIGHUP', terminate);
 function terminate() {
   npid.remove();
 
-  logger.info('======================= Stoping Google Radius Server with PID: ' + pid + ' =======================');
+  logger.info('========================= Stoping Google Radius Server with PID: ' + pid + ' ==========================');
 
   _process2.default.exit(0);
 }

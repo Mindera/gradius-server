@@ -24,14 +24,17 @@ const logger = new winston.Logger({
 global.logger = logger;
 
 const pid = process.pid;
+
 let npid;
-try {
-    npid = NPID.create(argv.pidfile);
-    npid.removeOnExit();
-} catch (error) {
-    console.error(error);
-    process.exit(1);
-}
+(function () {
+  try {
+      npid = NPID.create(argv.pidfile);
+      npid.removeOnExit();
+  } catch (error) {
+      console.error(error);
+      process.exit(1);
+  }
+})();
 
 logger.info(`========================= Starting Google Radius Server with PID: ${pid} =========================`);
 
