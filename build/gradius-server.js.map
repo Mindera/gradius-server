@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/gradius-server.js"],"names":[],"mappings":"AAAA,OAAO,MAAP,MAAmB,QAAnB;;AAEA,OAAO,MAAP,GAAgB,QAAhB;;AAEA,QAAQ,GAAR,CAAY,OAAO,MAAP,CAAc,MAAd,CAAqB,IAArB,CAAZ","file":"gradius-server.js","sourcesContent":["import kongig from 'konfig';\n\nglobal.config = konfig();\n\nconsole.log(global.config.radius.port);"]}

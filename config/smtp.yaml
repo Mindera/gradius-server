@@ -1,0 +1,11 @@
+default:
+  port: 465
+  host: 'smtp.gmail.com'
+  secure: true
+  requireTLS: true
+  connectionTimeout: 1000
+  socketTimeout: 1000
+  debug: true
+
+production:
+  debug: false

@@ -1,0 +1,6 @@
+default:
+  address: '0.0.0.0'
+  port: 1812
+  protocol: 'udp4'
+  domain: 'your google domain'
+  secret: 'shared secret'
